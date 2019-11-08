@@ -5,9 +5,6 @@ const morgan = require('morgan')
 
 app.use(morgan('dev'))
 
-app.listen(8001, () => {
-  console.log('playstoreServer listening on port 8001')
-})
 
 app.get('/apps', (req, res) => {
   const { sort, genres } = req.query
@@ -42,3 +39,6 @@ app.get('/apps', (req, res) => {
 
   res.json(results)
 })
+
+
+module.exports = app;
